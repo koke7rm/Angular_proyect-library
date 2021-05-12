@@ -1,0 +1,32 @@
+
+
+<div id="contenedor">
+    <h1>{{ detalle.titulo }}</h1> <!--detalle es el nombre de la variable de tipo Escritor que recoge los datos que se reciben del service al hacer la peticion-->
+  
+    <article>
+      <h3>Sinopsis</h3>
+      <p>{{ detalle.sinopsis }}</p>
+  
+      <section>
+        <h3>Vendidos</h3>
+        <p>{{ detalle.vendidos }} de ejemplares</p>
+      </section>
+  
+      <section>
+        <h3>Fecha de publicación</h3>
+        <p>{{ detalle.publicacion }}</p>
+      </section>
+
+    <!--El nombre del escritor es un enlace para pasar a la vista detalle de ese escritor-->
+      <section>
+        <h3>Escrito por:</h3>
+          <p style="font-size: 1.2rem;"><a routerLink="/detalleEscritor" (click)="this.getDetalleEscritorId(detalle.escritor.id)">{{ detalle.escritor.nombre }} {{ detalle.escritor.apellidos }} </a> </p>
+      </section>
+  
+    </article>
+  
+    <div id="footer">
+      <p>&copy; All rights reserved. Created by Jorge Suárez</p>
+    </div>
+  </div>
+   

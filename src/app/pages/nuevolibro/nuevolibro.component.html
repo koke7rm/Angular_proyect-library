@@ -1,0 +1,45 @@
+
+
+<div id="contenedor">
+
+    <h1 style="text-align: center; background-color: goldenrod;">INTRODUCE LOS DATOS DEL NUEVO LIBRO</h1>
+  
+  <div class="container">
+      <div id="box" class="row" class="col-md-5" >
+          <form #libro="ngForm" (ngSubmit)="onSubmit(libro)">
+              <div class="form-group">
+                <label>Introduce Título ddel libro*</label>
+                <input type="text" class="form-control" name="titulo" #titulo [(ngModel)]="libroModel.titulo" required >
+                <div *ngIf="this.libroModel.validarTitulo" style="color: red; font-size: 0.8rem;">El campo título tiene que ser menor de 100 caracteres</div>
+              </div>
+              <div class="form-group">
+                <label>Introduce Sinopsis*</label>
+                <input type="text" class="form-control" name="sinopsis" #sinopsis [(ngModel)]="libroModel.sinopsis" required>
+                <div *ngIf="this.libroModel.validarSinopsis" style="color: red; font-size: 0.8rem;">El campo sinopsis tiene que ser menor de 300 caracteres</div>
+              </div>
+              <div class="form-group">
+                  <label>Introduce Ejemplares vendidos*</label>
+                  <input type="number" class="form-control" name="vendidos" #vendidos [(ngModel)]="libroModel.vendidos" required>
+                  <div *ngIf="this.libroModel.validarVendidos" style="color: red; font-size: 0.8rem;">El campo ejemplares vendidos tiene que ser mayor que 0 </div>
+                </div>
+              <div class="form-group">
+                  <label>Introduce fecha de publicacion*</label>
+                  <input type="date" class="form-control" name="publicacion" #publicacion [(ngModel)]="libroModel.publicacion" required>
+                </div>
+                <div class="form-group">
+                  <label>Introduce escritor*</label>
+                  <select  class="form-control" name="escritor" #escritor    [(ngModel)]="libroModel.escritor"  >
+                    <option [ngValue]="null"></option>
+                    <option [ngValue]="escritorOption" *ngFor="let escritorOption of escritores">{{escritorOption.nombre}}</option>
+                  </select>                 
+                </div>
+                           
+              <button type="submit" [disabled]="!libro.form.valid"  class="btn btn-primary" (click)="this.envioRegistro()" style="margin-left: 10%;">GUARDAR NUEVA OFERTA</button>
+              <a class="btn btn-primary" routerLink="/adminlibros" role="button" style="margin-left: 8%;">CANCELAR</a>
+          </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,30 @@
+
+
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Título</th>
+        <th scope="col">Sinopsis</th>
+        <th scope="col">Vendidos</th>
+        <th scope="col">Publicacion</th>
+        <th scope="col">Escritor</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let libro of this.libros">
+            <th scope="row">{{libro.id}}</th>
+            <td>{{libro.titulo}}</td>
+            <td>{{libro.sinopsis}}</td>
+            <td>{{libro.vendidos}}</td>
+            <td>{{libro.publicacion }}</td>
+            <td>{{libro.escritor.nombre}}</td> <!--Al tener relacion con libro, si un libro no tiene escritor este campo dara error y no aparecera nada despues del error-->
+            
+            <td><button type="button" class="btn btn-danger" (click)="this.deleteLibro(libro.id)">Eliminar</button></td>
+            
+            <td><button type="button" class="btn btn-danger" routerLink="/editlibro" (click)="this.getDetalleLibros(libro.id)">Editar</button></td>
+    </tbody>
+  </table>
+
+  <a class="btn btn-primary" routerLink="/nuevolibro"  role="button" style="margin-left: 35%;">CREAR NUEVO LIBRO</a>
+  <a class="btn btn-primary" routerLink="/adminescritores"  role="button" style="margin-left: 5%;">ADMIN ESCRITORES</a>

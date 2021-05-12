@@ -1,0 +1,70 @@
+
+#contenedor {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: black;
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    background-size:cover;
+     background-image: url(../../../assets/images/biblio.jpg) ;
+     background-attachment: fixed;
+     content: inherit;
+}
+
+
+h1{
+    text-align: center;
+    color: white;
+    background-image: url(../../../assets/images/libroAbierto.jpg) ;
+}
+
+h3{
+
+    text-align: center;
+    
+}
+
+article, section {
+    width: 740px;
+    
+    }
+
+    p{
+        text-align: center;
+    }
+
+     article{
+        background-image: url(../../../assets/images/libroAbierto.jpg) ;
+        background-size:cover;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 5px;
+        border: solid 1px #000;
+        margin-left: 30%;
+        margin-top: 5%;
+        margin-bottom: 13%;
+    }
+
+    /*CONFIGURACION DEL FOOTER*/
+
+#footer {
+    height: 170px;
+    margin: 0 auto;
+    padding: 50px 0 15px 0;
+    font-family: 'Abel', sans-serif;
+    background-color: black;
+   
+  }
+  
+  #footer p {
+    margin: 0;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+  }
+  

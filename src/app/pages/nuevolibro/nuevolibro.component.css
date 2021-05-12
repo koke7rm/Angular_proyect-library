@@ -1,0 +1,19 @@
+
+
+#contenedor{
+    background-image: url(../../../assets/images/añadirLibro.jpg) ;
+    width: 100%;
+    height: 880px;
+    background-size:cover;
+    background-attachment: fixed;
+    
+    }
+
+    #box{
+        margin-left: 30%;
+        margin-top: 10%; 
+        background: rgba(0,0,0, 0.80); 
+        color: white; border-radius: 30px;
+        height: 500px; 
+        border: 10px solid goldenrod;
+    }

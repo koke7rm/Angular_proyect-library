@@ -1,0 +1,49 @@
+
+
+#contenedor{
+    background-image: url(../../../assets/images/biblio.jpg) ;
+    width: 100%;
+    background-size:cover;
+    margin: auto;
+    background-attachment: fixed;
+    }
+
+    h3{ 
+        text-align: center;
+        font: 3rem 'Castoro', sans-serif;
+        color:  #457DAC;
+        font-weight: bold;
+    }
+
+    #tituloLibro{
+        font: 1.2rem 'Roboto'; 
+        color: white ;
+        font-style: italic;
+    }
+
+#btnDetalle{
+    float: right;
+}
+
+/*CONFIGURACION DEL FOOTER*/
+
+#footer {
+    height: 140px;
+    margin: 0 auto;
+    padding: 50px 0 15px 0;
+    font-family: 'Abel', sans-serif;
+    background-color: black;
+   
+  }
+  
+  #footer p {
+    margin: 0;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    line-height: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+  }
+  

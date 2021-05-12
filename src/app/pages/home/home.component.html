@@ -1,0 +1,37 @@
+
+<!--Contenedor para la barra de busqueda de libro-->
+
+<div id="contenedor" >
+  <div class="container" style="margin-bottom: 5%; margin-left: 30%;">
+    <input [(ngModel)]="libroModel.titulo" placeholder="Buscar libro por titulo" class="search-input" style="width: 500px;">
+    <button type="submit" class="btn btn-primary" routerLink="/detalle" (click)="this.getDetalleLibrosTitulo(libroModel.titulo)" >Buscar</button>
+  </div>
+
+    <header>
+      <h3>LIBROS DE LA SEMANA</h3>
+    </header>
+
+    <!--Contenedor para la tabla con la lista de libros. Mediante un for se recorre toda la lista y muestra los titulos por pantalla
+         Se implementa un boton para que al pulsar pase a la pagina de detalle recogiendo el id del libro-->
+    
+  <div class="container" class="col-md-5" style="background: rgba(0,0,0, 0.80); margin-left: 28%; margin-bottom: 10%; color: white;">
+    <div class="row">
+      <table class="table table-bordered">
+        <tbody>
+          <tr *ngFor="let libro of this.libros | slice:0:6">
+            <th scope="row" id="tituloLibro">{{libro.titulo}} 
+                <a class="btn btn-primary" id="btnDetalle" routerLink="/detalle" (click)="this.getDetalleLibros(libro.id)"
+                role="button">Ir a detalle</a></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!--implementacion de un footer con info del creador-->
+  
+  <div id="footer">
+    <p>&copy; All rights reserved. Created by Jorge Suárez </p>
+  </div>
+  
+  </div>

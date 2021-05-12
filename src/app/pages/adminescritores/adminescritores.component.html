@@ -1,0 +1,27 @@
+
+<h2 style="text-align: center; margin-bottom: 3%;">Para borrar un escritor antes tienes que borrar sus libros</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Nacionalidad</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let escritor of this.escritores">
+            <th scope="row">{{escritor.id}}</th>
+            <td>{{escritor.nombre}}</td>
+            <td>{{escritor.apellidos}}</td>
+            <td>{{escritor.edad}}</td>
+            <td>{{escritor.nacionalidad }}</td>
+            <td><button type="button" class="btn btn-danger" (click)="this.deleteEscritor(escritor.id)">Eliminar</button></td>
+    </tbody>
+  </table>
+
+  <a class="btn btn-primary" routerLink="/nuevaoferta"  role="button" style="margin-left: 40%;">CREAR NUEVO ESCRITOR</a>
+  <a class="btn btn-primary" routerLink="/adminlibros" role="button" style="margin-left: 8%;">CANCELAR</a>
+
+
